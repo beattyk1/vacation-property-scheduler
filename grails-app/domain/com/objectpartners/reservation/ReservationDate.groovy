@@ -10,5 +10,6 @@ class ReservationDate {
 		startDate(blank : false)
 		endDate(blank : false)
 		property(blank : false)
+		reserved(blank : true, nullable : true)
     }
 }

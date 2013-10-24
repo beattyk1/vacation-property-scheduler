@@ -30,10 +30,10 @@ class BootStrap {
 			def resDate5 = new ReservationDate(property : condo, reserved : new Boolean('false'), startDate : today+20, endDate : today+25).save()
 
 		
-			def kevin = new Employee(first: "Kevin", last:"Beatty", hireDate : today-395).save()
-			def moe = new Employee(first: "Moe", last:"Howard", hireDate : today-1500).save()
-			def larry = new Employee(first: "Larry", last:"Fine", hireDate : today-3).save()
-			def curly = new Employee(first: "Curly", last:"Howard", hireDate : today-3650).save()
+			def kevin = new Employee(firstName: "Kevin", lastName:"Beatty", hireDate : today-395).save()
+			def moe = new Employee(firstName: "Moe", lastName:"Howard", hireDate : today-1500).save()
+			def larry = new Employee(firstName: "Larry", lastName:"Fine", hireDate : today-3).save()
+			def curly = new Employee(firstName: "Curly", lastName:"Howard", hireDate : today-3650).save()
 			
 			def removed = new Boolean(false);
 			

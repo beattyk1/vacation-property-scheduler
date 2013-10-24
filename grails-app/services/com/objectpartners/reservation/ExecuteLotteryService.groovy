@@ -121,7 +121,7 @@ class ExecuteLotteryService {
 		def monthBetween = (today[Calendar.MONTH] - date[Calendar.MONTH]) 
 		def yearsBetween = today[Calendar.YEAR] - date[Calendar.YEAR]
 		def months = monthBetween + (yearsBetween * 12)
-		months = (months >= 0 ? months : 0) // can put a default value here for new hires, if desired
+		months = (months > 0 ? months : 1) // New hire will start with one ball; 
 		return months
 	}
 	

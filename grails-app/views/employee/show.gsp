@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list employee">
 			
-				<g:if test="${employeeInstance?.first}">
+				<g:if test="${employeeInstance?.firstName}">
 				<li class="fieldcontain">
-					<span id="first-label" class="property-label"><g:message code="employee.first.label" default="First" /></span>
+					<span id="firstName-label" class="property-label"><g:message code="employee.firstName.label" default="First Name" /></span>
 					
-						<span class="property-value" aria-labelledby="first-label"><g:fieldValue bean="${employeeInstance}" field="first"/></span>
+						<span class="property-value" aria-labelledby="firstName-label"><g:fieldValue bean="${employeeInstance}" field="firstName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${employeeInstance?.lastName}">
+				<li class="fieldcontain">
+					<span id="lastName-label" class="property-label"><g:message code="employee.lastName.label" default="Last Name" /></span>
+					
+						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${employeeInstance}" field="lastName"/></span>
 					
 				</li>
 				</g:if>
@@ -37,15 +46,6 @@
 					<span id="hireDate-label" class="property-label"><g:message code="employee.hireDate.label" default="Hire Date" /></span>
 					
 						<span class="property-value" aria-labelledby="hireDate-label"><g:formatDate date="${employeeInstance?.hireDate}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${employeeInstance?.last}">
-				<li class="fieldcontain">
-					<span id="last-label" class="property-label"><g:message code="employee.last.label" default="Last" /></span>
-					
-						<span class="property-value" aria-labelledby="last-label"><g:fieldValue bean="${employeeInstance}" field="last"/></span>
 					
 				</li>
 				</g:if>

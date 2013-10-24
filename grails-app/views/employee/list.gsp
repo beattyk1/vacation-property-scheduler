@@ -24,11 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="first" title="${message(code: 'employee.first.label', default: 'First')}" />
+						<g:sortableColumn property="firstName" title="${message(code: 'employee.firstName.label', default: 'First Name')}" />
+					
+						<g:sortableColumn property="lastName" title="${message(code: 'employee.lastName.label', default: 'Last Name')}" />
 					
 						<g:sortableColumn property="hireDate" title="${message(code: 'employee.hireDate.label', default: 'Hire Date')}" />
-					
-						<g:sortableColumn property="last" title="${message(code: 'employee.last.label', default: 'Last')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				<g:each in="${employeeInstanceList}" status="i" var="employeeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${employeeInstance.id}">${fieldValue(bean: employeeInstance, field: "first")}</g:link></td>
+						<td><g:link action="show" id="${employeeInstance.id}">${fieldValue(bean: employeeInstance, field: "firstName")}</g:link></td>
+					
+						<td>${fieldValue(bean: employeeInstance, field: "lastName")}</td>
 					
 						<td><g:formatDate date="${employeeInstance.hireDate}" /></td>
-					
-						<td>${fieldValue(bean: employeeInstance, field: "last")}</td>
 					
 					</tr>
 				</g:each>
