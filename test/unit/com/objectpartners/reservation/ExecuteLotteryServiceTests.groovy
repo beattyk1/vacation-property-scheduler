@@ -1,8 +1,7 @@
 package com.objectpartners.reservation
 
-/**
- * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
- */
+import grails.test.mixin.TestFor
+
 @TestFor(ExecuteLotteryService)
 class ExecuteLotteryServiceTests {
 
@@ -30,8 +29,9 @@ class ExecuteLotteryServiceTests {
 	void testCalculateMonthsAtOPINewHire() {
 		def service = new ExecuteLotteryService()
 		Integer result = service.calculateMonthsAtOPI(new Date())
-		// Don't get a ball until you have worked into the next month
-		assertEquals(0, result)
+        /* You get one 'pity' ball during your first month
+           This was done so that the system doesn't need to deal with "0" */
+        assertEquals(1, result)
 	}
 	
 	void testCalculateMonthsAtOPIOneYear() {

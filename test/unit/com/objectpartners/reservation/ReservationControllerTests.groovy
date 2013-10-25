@@ -1,5 +1,8 @@
 package com.objectpartners.reservation
 
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
+
 @TestFor(ReservationController)
 @Mock([Reservation, Employee, ReservationDate, Property])
 class ReservationControllerTests {

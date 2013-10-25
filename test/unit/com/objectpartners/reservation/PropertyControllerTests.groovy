@@ -1,5 +1,8 @@
 package com.objectpartners.reservation
 
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
+
 @TestFor(PropertyController)
 @Mock(Property)
 class PropertyControllerTests {
