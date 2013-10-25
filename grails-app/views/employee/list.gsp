@@ -36,11 +36,13 @@
 				<g:each in="${employeeInstanceList}" status="i" var="employeeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${employeeInstance.id}">${fieldValue(bean: employeeInstance, field: "firstName")}</g:link></td>
+						<td>${fieldValue(bean: employeeInstance, field: "firstName")}</td>
 					
 						<td>${fieldValue(bean: employeeInstance, field: "lastName")}</td>
 					
 						<td><g:formatDate date="${employeeInstance.hireDate}" /></td>
+						
+						<td><g:link action="show" id="${employeeInstance.id}">SHOW</g:link></td>
 					
 					</tr>
 				</g:each>
