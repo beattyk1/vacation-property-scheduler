@@ -27,7 +27,7 @@
 						<li><g:link action="create" controller="reservation">Create Reservation Request</g:link></li>
 						<li><g:link action="list" controller="reservationDate">Property Availability Calendars</g:link></li>
 						<li><g:link action="list" controller="reservation">My Vacation Dates</g:link></li>
-						<li><a href="#">See Lottery History</a></li>
+						<li><g:link action="list" controller="reservationResult">See Lottery History</g:link></li>
 						<li><g:link action="list" controller="faq">FAQ</g:link></li>
 					</ul>
 				</div>
