@@ -23,7 +23,7 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li class="active"><a href="/vacation">Home</a></li>
+						<li><a href="/vacation">Home</a></li>
 						<li><g:link action="create" controller="reservation">Create Reservation Request</g:link></li>
 						<li><g:link action="list" controller="reservationDate">Property Availability Calendars</g:link></li>
 						<li><g:link action="list" controller="reservation">My Vacation Dates</g:link></li>
