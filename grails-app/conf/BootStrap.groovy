@@ -1,7 +1,5 @@
 import grails.util.Environment;
 
-import javax.media.j3d.EnvironmentSet;
-
 import com.objectpartners.reservation.Employee
 import com.objectpartners.reservation.Property
 import com.objectpartners.reservation.Reservation

@@ -89,3 +89,13 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+grails.resources.modules = {
+	// Add additional scripts as needed
+	opi_js {
+		resource url:'/js/opi_jquery.js'
+	}
+}
+
+grails.plugins.twitterbootstrap.fixtaglib = true
+grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
