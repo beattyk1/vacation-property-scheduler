@@ -7,14 +7,14 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<r:require modules="bootstrap-responsive-less,bootstrap-js,opi_js"/>
+		<r:require modules="bootstrap-responsive-less,bootstrap-js"/>
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="opiLogo" role="banner"><a href="http://objectpartners.com"><img src="${resource(dir: 'images', file: 'opi_logo.png')}" alt="Grails"/></a></div>
+		<!--  <div class="container" id="opiLogo" role="banner"><a href="http://objectpartners.com"><img src="${resource(dir: 'images', file: 'opi_logo.png')}" alt="Grails"/></a></div> -->
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
+		<div class="footer container" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 		<r:layoutResources />

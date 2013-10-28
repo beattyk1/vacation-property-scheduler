@@ -92,9 +92,9 @@ log4j = {
 
 grails.resources.modules = {
 	// Add additional scripts as needed
-	opi_js {
-		resource url:'/js/opi_jquery.js'
-	}
+	//opi_js {
+	//	resource url:'/js/opi_jquery.js'
+	//}
 }
 
 grails.plugins.twitterbootstrap.fixtaglib = true
