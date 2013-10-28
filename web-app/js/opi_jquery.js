@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	alert('js/opi_jquery.js is working');
+	//alert('js/opi_jquery.js is working');
 });
