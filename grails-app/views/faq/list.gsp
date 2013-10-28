@@ -9,7 +9,7 @@
 			<h3>How does the reservation process work?</h3>
 
 			<p>Reservations are awarded based on a "lottery" similar to the
-				NBA drafts.</p>
+				NBA draft.</p>
 			<ol>
 				<li>Select the date(s) and properties that would like to
 					request</li>
@@ -25,13 +25,13 @@
 
 			<h3>How does the lottery work?</h3>
 
-			<p>This lottery works by adding balls for employee into the
+			<p>This lottery works by adding balls for each employee into the
 				lottery machine. You receive a "ball" for each month of service.
 				Here is how it works</p>
 			<ul>
 				<p>System gathers everyones #1 pick</p>
 				<ol>
-					<li>For each date, the system places matching requests into
+					<li>For each requested date, the system places matching requests into
 						the machine</li>
 					<li>System selects a random number and determines which
 						employee wins</li>
@@ -40,7 +40,7 @@
 				</ol>
 				<br />
 				<p>System gathers everyones next highest available pick and runs
-					the lottery again. This continues until all the available dates are
+					the lottery again for all requested dates. This continues until all the available dates are
 					taken or all the employee reservation request have been processed</p>
 			</ul>
 
