@@ -48,9 +48,9 @@
 			<p>Suppose three employees have selected July 4th at the cabin as
 				their #1 choice</p>
 			<ul>
-				<li>Larry employed 1 year, 3 months = 15 balls</li>
-				<li>Curly employed 8 years, 3 months = 99 balls</li>
-				<li>Moe employed 7 years, 9 months = 93 balls</li>
+				<li>Larry employed 1 year, 3 months gets 15 balls</li>
+				<li>Curly employed 8 years, 3 months gets 99 balls</li>
+				<li>Moe employed 7 years, 9 months gets 93 balls</li>
 			</ul>
 			<p>The lottery machine would contain (15+99+93) = 207 balls.</p>
 			<ul>
@@ -58,6 +58,7 @@
 				<li>Curly has a 99/207 chance of getting the date (47.82%)</li>
 				<li>Moe has a 93/207 change of getting the date (44.93%)</li>
 			</ul>
+			<p>Let's assume Curly wins.  He is given the date and his remaining picks are removed.  July 4th at the cabin is removed from everyone's list. The systems runs again.
 		</div>
 	</div>
 </body>

@@ -17,8 +17,7 @@
 </head>
 <body>
 	<div class="container">
-	<h1>Vacation Property Scheduler</h1>
-
+		<h1>Vacation Property Scheduler</h1>
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
@@ -33,13 +32,23 @@
 				</div>
 			</div>
 		</div>
-	<g:layoutBody />
-	<div class="footer container" role="contentinfo"></div>
-	<div id="spinner" class="spinner" style="display: none;">
-		<g:message code="spinner.alt" default="Loading&hellip;" />
-	</div>
-	<g:javascript library="application" />
-	<r:layoutResources />
+		<g:if test="${session.employee}">
+			<g:layoutBody />
+		</g:if>
+		<g:else> 
+			<g:form class="form-signin" controller="employee" action="login">
+			<h2 class="form-signin-heading">Please sign in</h2>
+			<input type="text" class="form-control" name="username" placeholder="username" autofocus>
+			<input type="password" class="form-control" name="password" placeholder="password">
+			<button class="btn btn-small btn-primary" type="submit">Sign in</button>
+			</g:form>
+		</g:else>
+		<div class="footer container" role="contentinfo"></div>
+		<div id="spinner" class="spinner" style="display: none;">
+			<g:message code="spinner.alt" default="Loading&hellip;" />
+		</div>
+		<g:javascript library="application" />
+		<r:layoutResources />
 	</div>
 </body>
 

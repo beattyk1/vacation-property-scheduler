@@ -9,6 +9,8 @@ class EmployeeControllerTests {
 
     def populateValidParams(params) {
         assert params != null
+		params["login"] = 'loginName'
+		params["password"] = 'myPassword'
         params["firstName"] = 'MyFirstName'
 		params["lastName"] = 'MyLastName'
 		params["hireDate"] = new Date()

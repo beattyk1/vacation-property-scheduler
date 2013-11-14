@@ -13,7 +13,7 @@ class ReservationControllerTests {
 	public void setUp() {
 		def today = new Date()
 		Property cabin = new Property(name:'CABIN', description:'WI Cabin').save()
-		employee = new Employee(firstName: "Kevin", lastName:"Beatty", hireDate : today-395).save()
+		employee = new Employee(login:'knb123', password:'123456', firstName: "Kevin", lastName:"Beatty", hireDate : today-395).save()
 		reservationDate = new ReservationDate(property : cabin, reserved : new Boolean('false'), startDate : today+0, endDate : today+3).save()
 	}
 

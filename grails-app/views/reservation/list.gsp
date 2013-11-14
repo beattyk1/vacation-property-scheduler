@@ -13,39 +13,43 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table class="table table-striped">
 				<thead>
-					<tr>
+					<tr>	
 					
-						<g:sortableColumn property="awarded" title="${message(code: 'reservation.awarded.label', default: 'Awarded')}" />
+						<th><g:message code="reservation.employee.label" default="Name" /></th>
 					
-						<g:sortableColumn property="balls" title="${message(code: 'reservation.balls.label', default: 'Balls')}" />
+						<g:sortableColumn property="selectionOrder" title="Selection Order" />
+						
+						<th><g:message code="reservation.reservationDate.property" default="Property" /></th>			
 					
-						<th><g:message code="reservation.reservationResult.label" default="Reservation Result" /></th>
-					
-						<th><g:message code="reservation.employee.label" default="Employee" /></th>
-					
-						<g:sortableColumn property="removed" title="${message(code: 'reservation.removed.label', default: 'Removed')}" />
+						<g:sortableColumn property="removed" title="${message(code: 'reservation.removed.label', default: 'Already Reserved')}" />
 					
 						<th><g:message code="reservation.reservationDate.label" default="Reservation Date" /></th>
+						
+						
+						
+						<g:sortableColumn property="awarded" title="${message(code: 'reservation.awarded.label', default: 'Awarded')}" />
 					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${reservationInstanceList}" status="i" var="reservationInstance">
+	
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${reservationInstance.id}">${fieldValue(bean: reservationInstance, field: "awarded")}</g:link></td>
+						<td>${reservationInstance.employee.firstName} ${reservationInstance.employee.lastName}</td>
 					
-						<td>${fieldValue(bean: reservationInstance, field: "balls")}</td>
-					
-						<td>${fieldValue(bean: reservationInstance, field: "reservationResult")}</td>
-					
-						<td>${fieldValue(bean: reservationInstance, field: "employee")}</td>
+						<td>${reservationInstance.selectionOrder}</td>
+						
+						<td>${reservationInstance.reservationDate.property.name}</td>
 					
 						<td><g:formatBoolean boolean="${reservationInstance.removed}" /></td>
 					
-						<td>${fieldValue(bean: reservationInstance, field: "reservationDate")}</td>
+						<td><g:formatDate format="dd-MMM-yyy" date="${reservationInstance.reservationDate.startDate}" /> to <g:formatDate format="dd-MMM-yyyy" date="${reservationInstance.reservationDate.endDate}"/>
+						</td>
+						
+						<td><g:link action="show" id="${reservationInstance.id}">${fieldValue(bean: reservationInstance, field: "awarded")}</g:link></td>
 					
 					</tr>
 				</g:each>

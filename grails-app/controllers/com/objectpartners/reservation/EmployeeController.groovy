@@ -5,7 +5,27 @@ import org.springframework.dao.DataIntegrityViolationException
 class EmployeeController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+	LoginCommand cmd
+	def login() {
+		if (request.method == 'POST') {
+			cmd = new LoginCommand()
+			cmd.username = params.username
+			cmd.password = params.password
+			println "${cmd.username} ${cmd.password}"
+			if (!cmd.hasErrors()) {
+				session.employee = cmd.getEmployee()
+				redirect(controller:'reservation')
+			}
+			else {
+				render(view:'/vacation/index', model:[loginCmd:cmd])
+			}
+		}
+		else {
+			render(view:'/vacation/index')
+		}
+		
+	}
+	
     def index() {
         redirect(action: "list", params: params)
     }

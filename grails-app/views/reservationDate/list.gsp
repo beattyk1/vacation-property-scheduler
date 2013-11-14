@@ -13,7 +13,7 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table class="table table-striped">
 				<thead>
 					<tr>
 					
@@ -29,16 +29,16 @@
 				</thead>
 				<tbody>
 				<g:each in="${reservationDateInstanceList}" status="i" var="reservationDateInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr>
 					
-						<td><g:link action="show" id="${reservationDateInstance.id}">${fieldValue(bean: reservationDateInstance, field: "startDate")}</g:link></td>
+						<td><g:formatDate format="dd-MMM-yyy" date="${reservationDateInstance.startDate}" /></td>
+						
+						<td><g:formatDate format="dd-MMM-yyy" date="${reservationDateInstance.endDate}" /></td>
 					
-						<td><g:formatDate date="${reservationDateInstance.endDate}" /></td>
-					
-						<td>${fieldValue(bean: reservationDateInstance, field: "property")}</td>
+						<td>${reservationDateInstance.property.name}</td>
 					
 						<td><g:formatBoolean boolean="${reservationDateInstance.reserved}" /></td>
-					
+						
 					</tr>
 				</g:each>
 				</tbody>
